@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Word</title>
+</head>
+<body>
+
+
+
+Шрифт:
+<select id="fontInput">
+    <option value="Times New Roman" selected>Times New Roman</option>
+    <option value="Arial">Arial</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Helvetica">Helvetica</option>
+</select>
+<br>
+<!--<input id="colorInput" value="Цвет"/>-->
+Цвет шрифта:
+<select id="colorInput">
+    <option value="black">Черный</option>
+    <option value="red">Красный</option>
+    <option value="blue">Синий</option>
+    <option value="green">Зеленый</option>
+    <option value="yellow">Желтый</option>
+</select>
+<br>
+Размер шрифта:
+<select id="sizeInput">
+    <option value="8">8</option>
+    <option value="12">12</option>
+    <option value="16">16</option>
+    <option value="20">20</option>
+    <option value="24">24</option>
+    <option selected value="28">28</option>
+    <option value="32">32</option>
+    <option value="36">36</option>
+    <option value="48">48</option>
+    <option value="72">72</option>
+</select>
+<!--<input id="sizeInput"/>-->
+
+
+<br>
+Выравнивание:
+
+<input type="radio" id="textRavn" name="ravn" value="left" checked> Влево
+<input type="radio" id="textRavn" name="ravn" value="right"> Вправо
+<input type="radio" id="textRavn" name="ravn" value="center"> По центру
+
+<br>
+<button id="nameButton">Ok</button>
+<br>
+<textarea id="nameInput" cols="40" rows="6">
+
+</textarea>
+<br>
+Result:
+<div id="name">Your text</div>
+
+
+<script>
+
+    var button=document.querySelector("#nameButton");
+
+    var block=document.querySelector("#name");
+
+    var nameInput=document.querySelector("#nameInput");
+
+    var colorInput=document.querySelector("#colorInput");
+
+    var sizeInput=document.querySelector("#sizeInput");
+
+    var textRavn=document.querySelector("#textRavn");
+
+    var fontInput=document.querySelector("#fontInput");
+
+    button.onclick = function () {
+
+        block.innerHTML = nameInput.value;
+
+        block.style.color = colorInput.value;
+
+        block.style.fontSize = sizeInput.value + "px";
+
+        block.style.textAlign = textRavn.value;
+
+        block.style.fontFamily = fontInput.value;
+
+
+
+
+
+    };
+
+
+
+</script>
+</body>
+</html>
